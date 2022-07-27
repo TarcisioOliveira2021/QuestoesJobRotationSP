@@ -1,25 +1,14 @@
-package com.jobRotation.Question4;
+package com.jobRotation.Questao4;
 
-import java.text.DecimalFormat;
-
-public class Question4 {
+public class Questao4Alternativa {
 	public static void main(String[] args) {
-		
-		//Guardando os valores.
-		Double spFat = 67.83643;
-		Double rjFat = 36.67866;
-		Double mgFat = 29.22988;
-		Double esFat = 27.16548;
-		Double outrosFat = 19.84953;
-		//Total.
-		Double totalDouble = spFat + rjFat + mgFat + esFat + outrosFat;
-		
-		//Formatando o valor total.
-		DecimalFormat dFormat = new DecimalFormat("#,000.00");
-		String formatado = dFormat.format(totalDouble);
-		//Exibição
-		System.out.println("O Faturamento total é de: "+totalDouble +"\nFormatado: "+formatado);
-		
+		//Entrada
+		double spFat = 67.83643;
+		double rjFat = 36.67866;
+		double mgFat = 29.22988;
+		double esFat = 27.16548;
+		double outrosFat = 19.84953;
+		double totalDouble = spFat + rjFat + mgFat + esFat + outrosFat;
 		
 		//Procesamento da porcentagem de cada estado.
 		double pSpFat = ((spFat/totalDouble) * 100 );
@@ -34,8 +23,6 @@ public class Question4 {
 		System.out.println("A porcentagem de MG foi: "+(int)pMgFat+"%");
 		System.out.println("A porcentagem do ES foi: "+(int)pEsFat+"%");
 		System.out.println("A porcentagem de outros estados: "+(int)pOutrosFat+"%");
-		
-		
-		
-	}	
+
+	}
 }
