@@ -1,12 +1,28 @@
 package com.jobRotation.Questao2;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Questao2 {
-	
-	//TODO Refatorar.
+
 	public static void main(String[] args) {
-		//Faz a sequencia de fibonnaci.
+		iniciar();
+	}
+	
+	//Inicia o programa
+	public static void iniciar() {
+		System.out.println("Informe um numero que deseja verificar: ");
+		Scanner sc = new Scanner(System.in);
+		int numero = sc.nextInt();
+		// int numero = 2;
+		// verifyPertence(numero)
+		sc.close();
+		verifiqPertence(numero);
+	}
+	
+	//50 numeros da sequencia de fibonnaci.
+	//Método que construi um vetor com a sequência fibonnaci.
+	public static ArrayList<Integer> fiboList(){
 		ArrayList<Integer> fibonnaciSequence = new ArrayList<>();
 		int atual = 0;
 		int anterior = 0;
@@ -20,15 +36,16 @@ public class Questao2 {
 			}
 			fibonnaciSequence.add(atual);
 		}
-		//informar um numero.
-		int pertenceFibo = 34;
-		//verificar se esse numero pertence a sequencia de fibonnaci.
-		if (fibonnaciSequence.contains(pertenceFibo)) {
-			System.out.println("O número informado: "+pertenceFibo+ " está presente na sequência fibonnaci.");
-		}else {
-			System.out.println("O número informado: "+pertenceFibo+ " NÃO está presente na sequência fibonnaci.");
-		}
-		
+		return(fibonnaciSequence);
 	}
 	
+	//Método que compara.
+	//verificar se esse numero pertence a sequencia de fibonnaci.
+	public static void verifiqPertence(int pertence) {
+		if (fiboList().contains(pertence)) {
+			System.out.println("O número informado: "+pertence+ " está presente na sequência fibonnaci.");
+		}else {
+			System.out.println("O número informado: "+pertence+ " NÃO está presente na sequência fibonnaci.");
+		}
+	}
 }
